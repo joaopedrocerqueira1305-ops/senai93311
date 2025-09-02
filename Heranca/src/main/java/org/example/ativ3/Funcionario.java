@@ -1,4 +1,5 @@
 package org.example.ativ3;
 
-public class Funcionario {
+public abstract class Funcionario {
+
 }

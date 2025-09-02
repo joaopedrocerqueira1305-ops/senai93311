@@ -1,4 +1,13 @@
 package org.example.polimorfismoAtiv;
 
-public class Galo {
+public class Galo implements Animal{
+    @Override
+    public String emitirSom() {
+        return "Cocorico";
+    }
+
+    @Override
+    public String comer() {
+        return "Galo come o milho";
+    }
 }
