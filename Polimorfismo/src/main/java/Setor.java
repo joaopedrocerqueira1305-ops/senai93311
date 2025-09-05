@@ -1,0 +1,5 @@
+public enum Setor{
+  RECURSOSOS_HUMANOS,
+  FINANCEIRO,
+  OPERACOES;
+}
