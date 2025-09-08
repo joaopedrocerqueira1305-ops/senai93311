@@ -1,9 +1,9 @@
 public abstract class Funcionario{
-  private String nome;
-  private String dataNascimento;
-  private Sexo sexo;
-  private Setor setor;
-  private double salarioBase;
+  protected String nome;
+  protected String dataNascimento;
+  protected Sexo sexo;
+  protected Setor setor;
+  protected double salarioBase;
 
   public Funcionario(String nome, String dataNascimento, Sexo sexo, Setor setor, double salarioBase){
     this.nome = nome;
@@ -46,10 +46,12 @@ public abstract class Funcionario{
 
   @Override
   public String toString(){
-    return "Nome: " + nome + "\n" + 
+    return "Nome: " + nome + " | " +
            "Data de Nascimento: " + dataNascimento + "\n" +
-           "Sexo: " + sexo + "\n" +
+           "Sexo: " + sexo + " | " +
            "Setor: " + setor + "\n" +
            "Salario Base: " + salarioBase;
   }
+
+  public abstract double getSalarioFinal();
 }

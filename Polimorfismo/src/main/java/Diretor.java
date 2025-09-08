@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Diretor extends Funcionario implements Contratacao{
-  private double PREMIO;
+  private final double PREMIO;
   private List<Funcionario> funcionariosContratados;
 
   public Diretor(String nome, String dataNascimento, Sexo sexo, Setor setor, double salarioBase, double PREMIO){
@@ -31,8 +31,14 @@ public class Diretor extends Funcionario implements Contratacao{
   public String toString(){
     return "Diretor: " + "\n" +
       super.toString() + "\n" +
-           "Premio: " + PREMIO + "\n" +
+           "salarioFinal: " + this.getSalarioFinal() + "\n" +
            "Funcionarios contratados: " + "\n" +
            funcionariosContratados ;
+  }
+
+  @Override
+  public double getSalarioFinal() {
+    double acrescimo = super.salarioBase + this.PREMIO;
+    return super.salarioBase + acrescimo;
   }
 }

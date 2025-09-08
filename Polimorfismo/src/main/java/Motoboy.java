@@ -9,6 +9,13 @@ public class Motoboy extends Funcionario{
   @Override
   public String toString(){
     return super.toString() + "\n" +
+            "Salario Final: " + this.getSalarioFinal() + "\n" +
            "Carteira de Habilitacao: " + carteiradeHabilitacao + "\n";
   }
+
+  @Override
+  public double getSalarioFinal() {
+    return super.salarioBase;
+  }
+
 }

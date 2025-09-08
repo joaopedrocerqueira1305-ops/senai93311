@@ -1,5 +1,5 @@
 public interface Contratacao{
-  public void admitir(Funcionario funcionario);
-  public void demitir(Funcionario funcionario);
+  public abstract void admitir(Funcionario funcionario);
+  void demitir(Funcionario funcionario);
 
 }
