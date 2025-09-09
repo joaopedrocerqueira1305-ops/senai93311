@@ -5,7 +5,7 @@ public abstract class Funcionario{
   protected Setor setor;
   protected double salarioBase;
 
-  public Funcionario(String nome, String dataNascimento, Sexo sexo, Setor setor, double salarioBase){
+  public Funcionario(String nome, String dataNascimento, Sexo sexo, Setor setor, double salarioBase) {
     this.nome = nome;
     this.dataNascimento = dataNascimento;
     this.sexo = sexo;

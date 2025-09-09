@@ -1,4 +1,4 @@
-package Exercicio2;
+package org.example;
 
 public abstract class Funcionario implements SalarioFinal{
     protected String nome;

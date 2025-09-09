@@ -1,7 +1,7 @@
-package Exercicio2;
+package org.example;
 
 public class Diretor extends CargoDeConfianca implements Contratacao {
-    private double PREMIO = 1.1;
+    private double PREMIO;
 
     public Diretor(String nome, String cpf, Sexo sexo, double salarioBase, String dataNascimento, String dataAdmissao, Bonificacao bonificacao, double PREMIO) {
         super(nome, cpf, sexo, salarioBase, dataNascimento, dataAdmissao, bonificacao);
@@ -28,7 +28,7 @@ public class Diretor extends CargoDeConfianca implements Contratacao {
 
     @Override
     public double getSalarioFinal() {
-        return super.salarioBase * super.bonificacao.getValor() * PREMIO;
+        return (super.salarioBase * super.bonificacao.getValor()) + this.PREMIO;
     }
 
     @Override

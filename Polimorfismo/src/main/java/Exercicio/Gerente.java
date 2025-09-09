@@ -24,11 +24,13 @@ public class Gerente extends CargoDeConfianca implements Contratacao{
 
     @Override
     public void admitir(Funcionario funcionario) {
+
         System.out.println("admitir: " + funcionario.toString());
     }
 
     @Override
     public void demitir(Funcionario funcionario) {
+
         System.out.println("demitir: " + funcionario.toString());
     }
 }
