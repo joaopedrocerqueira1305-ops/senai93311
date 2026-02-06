@@ -1,4 +1,4 @@
-package org.example.Pessoa;
+package org.example.RelacionamentoEntreClasse;
 
 public class Pessoa {
 }
