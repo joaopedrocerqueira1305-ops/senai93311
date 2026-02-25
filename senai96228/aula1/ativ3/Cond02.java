@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class cond02 {
+public class Cond02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("informe um número ");
