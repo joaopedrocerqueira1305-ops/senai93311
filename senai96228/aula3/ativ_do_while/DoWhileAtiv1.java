@@ -11,7 +11,7 @@ public class DoWhileAtiv1 {
             senha = sc.nextInt();
 
         } while(senha != 2024);
-
+        System.out.println("Acesso Permitido");
     sc.close();
     }
 }
