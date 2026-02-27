@@ -12,11 +12,11 @@ public class Cond03 {
         double media = (nota1+nota2) /2;
 
         if (media>=7) {
-            System.out.println("Aprovado");            
+            System.out.println("Aprovado");
         } else if (media>=5) {
-            System.out.println("Recuperação");            
+            System.out.println("Recuperação");
         }else {
-            System.out.println("Reprovado");            
+            System.out.println("Reprovado");
         }
         System.out.println("Media: " + media);
 
