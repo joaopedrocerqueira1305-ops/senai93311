@@ -1,3 +1,4 @@
+package aula1.ativ1;
 import java.util.Scanner;
 
 public class TaxaInvestimento {
