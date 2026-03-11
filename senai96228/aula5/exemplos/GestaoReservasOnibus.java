@@ -1,5 +1,3 @@
-package aula5.exemplos;
-
 import java.util.Scanner;
 
 public class GestaoReservasOnibus {

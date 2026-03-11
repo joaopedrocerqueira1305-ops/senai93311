@@ -8,6 +8,20 @@
             "type": "java",
             "name": "GestaoReservasOnibus",
             "request": "launch",
+            "mainClass": "GestaoReservasOnibus",
+            "projectName": "senai96228_fa3f62e9"
+        },
+        {
+            "type": "java",
+            "name": "GestaoReservasHotel",
+            "request": "launch",
+            "mainClass": "GestaoReservasHotel",
+            "projectName": "senai96228_fa3f62e9"
+        },
+        {
+            "type": "java",
+            "name": "GestaoReservasOnibus",
+            "request": "launch",
             "mainClass": "aula5.exemplos.GestaoReservasOnibus",
             "projectName": "senai96228_177d4097"
         },
