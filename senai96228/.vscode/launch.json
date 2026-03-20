@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LojaApp",
+            "request": "launch",
+            "mainClass": "POO.aula8.loja.LojaApp",
+            "projectName": "senai96228_fa3f62e9"
+        },
+        {
+            "type": "java",
+            "name": "CamisaApp",
+            "request": "launch",
+            "mainClass": "POO.aula8.diversao_camisa.CamisaApp",
+            "projectName": "senai96228_fa3f62e9"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "POO.aula8.diversao.Main",
+            "projectName": "senai96228_fa3f62e9"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "POO.aula8.Ex1.Main",
+            "projectName": "senai96228_fa3f62e9"
+        },
+        {
+            "type": "java",
             "name": "GestaoReservasOnibus",
             "request": "launch",
             "mainClass": "GestaoReservasOnibus",

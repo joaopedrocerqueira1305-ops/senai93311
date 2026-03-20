@@ -16,5 +16,6 @@ public class Cond07 {
         } else if (cor.equalsIgnoreCase("VERMELHO")) {
             System.out.println("preço: 40");
         }
+        sc.close();
     }
 }

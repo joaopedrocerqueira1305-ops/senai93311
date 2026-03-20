@@ -10,5 +10,6 @@ public class Questao2 {
         x = sc.nextInt();
     }
     System.out.println("Programa encerrado");
-}
+    sc.close();
+    }
 }

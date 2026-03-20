@@ -9,5 +9,6 @@ public class Questao3 {
             System.out.println("Digite o nome do professor mais fofo do senai: ");
             nome = sc.next();
         }
+        sc.close();
     }
 }

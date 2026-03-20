@@ -17,5 +17,6 @@ public class TaxaInvestimento {
         } else {
             System.out.println("Taxa Isenta (0%)");
         }
+        sc.close();
     }
 }
