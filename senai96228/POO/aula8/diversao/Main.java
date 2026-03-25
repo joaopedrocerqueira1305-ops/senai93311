@@ -1,4 +1,4 @@
-package POO.aula8.diversao;
+package aula8.diversao;
 
 import java.util.Scanner;
 

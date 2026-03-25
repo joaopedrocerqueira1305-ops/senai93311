@@ -1,4 +1,4 @@
-package POO.aula8.diversao;
+package aula8.diversao;
 
 public class Carro {
     private String marca;

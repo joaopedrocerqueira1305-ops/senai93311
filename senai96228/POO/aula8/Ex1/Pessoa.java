@@ -1,4 +1,4 @@
-package POO.aula8.Ex1;
+package aula8.Ex1;
 
 public class Pessoa {
     private String nome;

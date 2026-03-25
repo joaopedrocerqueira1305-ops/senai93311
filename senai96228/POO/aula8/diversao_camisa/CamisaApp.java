@@ -1,4 +1,4 @@
-package POO.aula8.diversao_camisa;
+package aula8.diversao_camisa;
 
 public class CamisaApp {
     public static void main(String[] args) {
