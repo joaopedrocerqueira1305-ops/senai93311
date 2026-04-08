@@ -1,3 +1,4 @@
+package aula12.gerenciamentoPessoa;
 public class Aluno extends Pessoa{
     private int matricula;
 

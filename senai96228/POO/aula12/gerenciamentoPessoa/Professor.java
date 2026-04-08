@@ -1,3 +1,4 @@
+package aula12.gerenciamentoPessoa;
 public class Professor extends Pessoa{
     private String disciplina;
 

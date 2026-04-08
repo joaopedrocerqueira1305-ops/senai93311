@@ -1,3 +1,4 @@
+package aula12.gerenciamentoPessoa;
 public class Pessoa {
     private String nome;
     private int idade;

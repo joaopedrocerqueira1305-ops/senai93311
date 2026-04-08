@@ -1,0 +1,12 @@
+package aula13.animal;
+
+public class Cachorro extends Animal {
+    public Cachorro(String nome) {
+        super(nome);
+    }
+
+    @Override
+    public void emitirSom() {
+        System.out.println("\nO cachorro " + getNome() + " está latindo: Au Au!");
+    }
+}
