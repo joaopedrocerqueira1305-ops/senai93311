@@ -40,7 +40,7 @@ public class SafeBank {
                         Double valorSaque = sc.nextDouble();
                         sc.nextLine();
 
-                        if ((valorSaque)<0) {
+                        if (valorSaque<0) {
                             throw new Exception("Erro: o valor não pode ser negativo");
                         } else if (valorSaque>saldo) {
                             throw new Exception("Erro: saldo insuficiente");
