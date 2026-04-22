@@ -16,5 +16,6 @@ public class Ex05 {
         } catch(Exception e){
             System.out.println("Erro inesparedo "+ e.getMessage());
         }
+        sc.close();
     }
 }
