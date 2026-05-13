@@ -37,10 +37,8 @@ public class Login extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("LOGIN");
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Documents\\NetBeansProjects\\Pessoa1\\src\\main\\resouce\\user_novo.png")); // NOI18N
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DADOS", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
@@ -50,14 +48,16 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("SENHA:");
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Documents\\NetBeansProjects\\Pessoa1\\src\\main\\resouce\\verificar.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Downloads\\senai93311\\senai96228\\POO\\aula20\\exemploPessoa\\Pessoa1\\src\\main\\resouce\\entrar.png")); // NOI18N
+        jButton1.setText("Entrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Documents\\NetBeansProjects\\Pessoa1\\src\\main\\resouce\\cancelar.png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Downloads\\senai93311\\senai96228\\POO\\aula20\\exemploPessoa\\Pessoa1\\src\\main\\resouce\\cancelar.png")); // NOI18N
+        jButton2.setText("limpar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -83,10 +83,10 @@ public class Login extends javax.swing.JFrame {
                                 .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(139, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(63, 63, 63))))
+                        .addComponent(jButton2)
+                        .addGap(53, 53, 53))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,9 +100,9 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20))
         );
 
@@ -137,10 +137,19 @@ public class Login extends javax.swing.JFrame {
                 String senha = new String(txtSenha.getPassword());
 
                 if (login.equals("admin") && senha.equals("123")) {
-                    JOptionPane.showMessageDialog(null, "Login bem-sucedido!");
-                    dispose(); // Fecha a tela de login
-                    TelaCadastro t = new TelaCadastro(); // Abre a tela do CRUD
-                    t.setVisible(true);
+                    JOptionPane.showMessageDialog(null, "Login bem-sucedido!");   
+                    
+                    try{
+                        TelaCadastro t = new TelaCadastro(); // Cria a tela
+                        t.setLocationRelativeTo(null);       // Centraliza (opcional)
+                        t.setVisible(true);                  // Abre a tela primeiro
+                    } catch (Exception e) {
+                        System.out.println("Erro ao abrir a Tela de Cadastro: " + e.getMessage());
+                        e.printStackTrace();
+                    }
+                    
+    
+                    this.dispose();                      // Fecha o login por último
                 } else {
                     JOptionPane.showMessageDialog(null, "Login ou senha incorretos!");
                 }

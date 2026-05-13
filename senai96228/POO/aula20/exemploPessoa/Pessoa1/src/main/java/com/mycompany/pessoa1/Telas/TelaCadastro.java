@@ -47,7 +47,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtArea = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setText("NOME:");
@@ -58,42 +58,48 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("BUSCA:");
 
-        btnCadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Documents\\NetBeansProjects\\Pessoa1\\src\\main\\resouce\\cadastra.png")); // NOI18N
+        btnCadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Downloads\\senai93311\\senai96228\\POO\\aula20\\exemploPessoa\\Pessoa1\\src\\main\\resouce\\cadastra.png")); // NOI18N
+        btnCadastrar.setText("cadastrar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastrarActionPerformed(evt);
             }
         });
 
-        btnAlterar.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Documents\\NetBeansProjects\\Pessoa1\\src\\main\\resouce\\intercambio.png")); // NOI18N
+        btnAlterar.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Downloads\\senai93311\\senai96228\\POO\\aula20\\exemploPessoa\\Pessoa1\\src\\main\\resouce\\intercambio.png")); // NOI18N
+        btnAlterar.setText("Alterar");
         btnAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAlterarActionPerformed(evt);
             }
         });
 
-        btnRemover.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Documents\\NetBeansProjects\\Pessoa1\\src\\main\\resouce\\cancelar.png")); // NOI18N
+        btnRemover.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Downloads\\senai93311\\senai96228\\POO\\aula20\\exemploPessoa\\Pessoa1\\src\\main\\resouce\\apagador.png")); // NOI18N
+        btnRemover.setText("remover");
         btnRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemoverActionPerformed(evt);
             }
         });
 
-        btnLimpar.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Documents\\NetBeansProjects\\Pessoa1\\src\\main\\resouce\\apagador.png")); // NOI18N
+        btnLimpar.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Downloads\\senai93311\\senai96228\\POO\\aula20\\exemploPessoa\\Pessoa1\\src\\main\\resouce\\cancelar.png")); // NOI18N
+        btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimparActionPerformed(evt);
             }
         });
 
-        btnBuscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Documents\\NetBeansProjects\\Pessoa1\\src\\main\\resouce\\lupa.png")); // NOI18N
+        btnBuscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Downloads\\senai93311\\senai96228\\POO\\aula20\\exemploPessoa\\Pessoa1\\src\\main\\resouce\\lupa.png")); // NOI18N
+        btnBuscar.setText("Buscar");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
             }
         });
 
-        brnExportar.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Documents\\NetBeansProjects\\Pessoa1\\src\\main\\resouce\\exportar.png")); // NOI18N
+        brnExportar.setIcon(new javax.swing.ImageIcon("C:\\Users\\aluno.den\\Downloads\\senai93311\\senai96228\\POO\\aula20\\exemploPessoa\\Pessoa1\\src\\main\\resouce\\exportar.png")); // NOI18N
+        brnExportar.setText("Exportar");
         brnExportar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 brnExportarActionPerformed(evt);
@@ -105,19 +111,17 @@ public class TelaCadastro extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btnBuscar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnAlterar, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
-                            .addComponent(btnCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAlterar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCadastrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnRemover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLimpar, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(btnLimpar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(brnExportar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,11 +329,9 @@ public class TelaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRemoverActionPerformed
 
     private void brnExportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brnExportarActionPerformed
-        
-        
+          
         try {
-        java.io.FileWriter writer = new java.io.FileWriter("C:\\Users\\aluno.den\\Documents\\NetBeansProjects\\Pessoa1\\src\\main\\ARQUIVO\\pessoas.txt");
-            
+        java.io.FileWriter writer = new java.io.FileWriter("pessoas.txt");         
         
 
         for (Pessoa p : listaPessoas) {
