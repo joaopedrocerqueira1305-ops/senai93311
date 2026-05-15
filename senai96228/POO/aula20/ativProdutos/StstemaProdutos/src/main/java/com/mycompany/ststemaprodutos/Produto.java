@@ -55,7 +55,7 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Produto{" + "id: " + id + ", nome: " + nome + "\npreco: " + preco + ", quantidade: " + quantidade + '}';
+        return "{id: " + id + ", nome: " + nome + "\npreco: " + preco + ", quantidade: " + quantidade + "}\n";
     }
 
 }

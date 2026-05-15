@@ -4,6 +4,8 @@
 
 package com.mycompany.ststemaprodutos;
 
+import com.mycompany.ststemaprodutos.telas.Login;
+
 /**
  *
  * @author aluno.den
@@ -11,6 +13,13 @@ package com.mycompany.ststemaprodutos;
 public class StstemaProdutos {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // Cria uma instância da tela de Login
+        Login telaLogin = new Login();
+        
+        // Centraliza a tela na abertura (opcional, mas recomendado)
+        telaLogin.setLocationRelativeTo(null);
+        
+        // Torna a tela visível
+        telaLogin.setVisible(true);
     }
 }

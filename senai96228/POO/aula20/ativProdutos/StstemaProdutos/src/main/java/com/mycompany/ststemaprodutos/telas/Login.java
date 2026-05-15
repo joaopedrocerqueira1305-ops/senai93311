@@ -125,7 +125,7 @@ public class Login extends javax.swing.JFrame {
         String login = txtUsuario.getText();
         String senha = new String(txtSenha.getPassword());
 
-        if (login.equals("admin") && senha.equals("123")) {
+        if (login.equals("admin") && senha.equals("1234")) {
             JOptionPane.showMessageDialog(null, "Login bem-sucedido!");   
 
             try{

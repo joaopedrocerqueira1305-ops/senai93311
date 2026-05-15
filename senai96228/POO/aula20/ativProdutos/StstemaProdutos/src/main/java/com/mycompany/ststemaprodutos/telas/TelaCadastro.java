@@ -4,12 +4,17 @@
  */
 package com.mycompany.ststemaprodutos.telas;
 
+import com.mycompany.ststemaprodutos.Produto;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aluno.den
  */
 public class TelaCadastro extends javax.swing.JFrame {
-
+    private ArrayList<Produto> listaProduto = new ArrayList<>();
+    int id=0;
     /**
      * Creates new form TelaCadastro
      */
@@ -34,6 +39,10 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtQuantidade = new javax.swing.JTextField();
         cadastrar = new javax.swing.JButton();
+        listar = new javax.swing.JButton();
+        alterar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        txtId = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,6 +67,25 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
+        listar.setText("Listar");
+        listar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listarActionPerformed(evt);
+            }
+        });
+
+        alterar.setText("Alterar");
+        alterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alterarActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("Busca");
+
+        txtId.setForeground(new java.awt.Color(204, 204, 204));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -65,18 +93,24 @@ public class TelaCadastro extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cadastrar)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(cadastrar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(listar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel1))
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel4))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtQuantidade, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                            .addComponent(txtQuantidade)
                             .addComponent(txtPreco)
-                            .addComponent(txtNome))))
-                .addContainerGap(125, Short.MAX_VALUE))
+                            .addComponent(txtId)
+                            .addComponent(txtNome, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,13 +126,21 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addComponent(cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(listar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -112,7 +154,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -122,8 +164,71 @@ public class TelaCadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
-        
+        try {
+            id +=1;
+            String nome = txtNome.getText();
+            String precoTexto = txtPreco.getText();
+            double preco = Double.parseDouble(precoTexto);
+            String qtdTexto = txtQuantidade.getText();
+            int qtd = Integer.parseInt(qtdTexto);
+
+            Produto p = new Produto(id, nome, preco, qtd);
+            listaProduto.add(p);
+
+            txtNome.setText("");
+            txtPreco.setText("");
+            txtQuantidade.setText("");
+        } catch (NumberFormatException e) {
+            id -=1;
+            JOptionPane.showMessageDialog(null, "Quantidade ou preço inválido");
+        }
     }//GEN-LAST:event_cadastrarActionPerformed
+
+    private void listarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarActionPerformed
+        if (listaProduto.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nenhum Produto cadastrado.");
+        } else {
+            JOptionPane.showMessageDialog(null, listaProduto.toString());
+        }
+    }//GEN-LAST:event_listarActionPerformed
+
+    private void alterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarActionPerformed
+        String idBuscaTexto = txtId.getText().trim();
+        String novoNome = txtNome.getText().trim();
+        String novaPrecoTexto = txtPreco.getText().trim();
+        String novaQtdTexto = txtQuantidade.getText().trim();
+
+        if (idBuscaTexto.isEmpty() || novoNome.isEmpty() || novaPrecoTexto.isEmpty() || novaQtdTexto.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Preencha todos os campos.");
+            return;
+        }
+
+        try {
+            int idBusca = Integer.parseInt(idBuscaTexto);
+            double novaPreco = Double.parseDouble(novaPrecoTexto);
+            int novaQtd = Integer.parseInt(novaQtdTexto);
+            
+            boolean encontrado = false;
+
+            for (Produto p : listaProduto) {
+                if (p.getId() == idBusca) {
+                    p.setNome(novoNome);
+                    p.setPreco(novaPreco);
+                    p.setQuantidade(novaQtd);
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (encontrado) {
+                JOptionPane.showMessageDialog(null, "Dados atualizados com sucesso!");
+            } else {
+                JOptionPane.showMessageDialog(null, "Produto não encontrado.");
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "preço ou quantidade inválida.");
+        }
+    }//GEN-LAST:event_alterarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,11 +266,15 @@ public class TelaCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton alterar;
     private javax.swing.JButton cadastrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton listar;
+    private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtPreco;
     private javax.swing.JTextField txtQuantidade;

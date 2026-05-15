@@ -230,7 +230,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
-         String nomeBusca = txtBuscar.getText().trim();
+        String nomeBusca = txtBuscar.getText().trim();
         String novoNome = txtNome.getText().trim();
         String novaIdadeTexto = txtIdade.getText().trim();
 
