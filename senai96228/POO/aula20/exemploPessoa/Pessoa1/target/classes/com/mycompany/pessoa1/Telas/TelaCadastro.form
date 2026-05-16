@@ -181,6 +181,9 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btnCadastrar">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\aluno.den\Downloads\senai93311\senai96228\POO\aula20\exemploPessoa\Pessoa1\src\main\resouce\cadastra.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="cadastrar"/>
               </Properties>
               <Events>
@@ -189,6 +192,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnAlterar">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\aluno.den\Downloads\senai93311\senai96228\POO\aula20\exemploPessoa\Pessoa1\src\main\resouce\intercambio.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Alterar"/>
               </Properties>
               <Events>
@@ -197,6 +203,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnRemover">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\aluno.den\Downloads\senai93311\senai96228\POO\aula20\exemploPessoa\Pessoa1\src\main\resouce\apagador.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="remover"/>
               </Properties>
               <Events>
@@ -205,6 +214,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnLimpar">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\aluno.den\Downloads\senai93311\senai96228\POO\aula20\exemploPessoa\Pessoa1\src\main\resouce\cancelar.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
               <Events>
@@ -213,6 +225,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnBuscar">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\aluno.den\Downloads\senai93311\senai96228\POO\aula20\exemploPessoa\Pessoa1\src\main\resouce\lupa.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Buscar"/>
               </Properties>
               <Events>
@@ -221,6 +236,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="brnExportar">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\aluno.den\Downloads\senai93311\senai96228\POO\aula20\exemploPessoa\Pessoa1\src\main\resouce\exportar.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Exportar"/>
               </Properties>
               <Events>

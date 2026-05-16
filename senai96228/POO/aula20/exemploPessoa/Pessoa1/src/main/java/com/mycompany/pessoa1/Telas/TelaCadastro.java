@@ -293,7 +293,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
-         String nomeBusca = txtBuscar.getText().trim();
+        String nomeBusca = txtBuscar.getText().trim();
 
         if (nomeBusca.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Digite um nome para remover.");
