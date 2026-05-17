@@ -1,0 +1,7 @@
+cadastroProduto\view\TelaCadastro.class
+com\mycompany\cadastroproduto\CadastroProduto.class
+cadastroProduto\dao\ProdutoDAO.class
+cadastroProduto\model\Produto.class
+cadastroProduto\model\Usuario.class
+cadastroProduto\view\Login.class
+cadastroProduto\controller\ProdutoController.class
