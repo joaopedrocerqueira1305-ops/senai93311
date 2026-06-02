@@ -34,7 +34,7 @@ public class ProdutoDao {
 
     public ArrayList<Produto> listar() {
         ArrayList<Produto> lista = new ArrayList<>();
-        String sql = "SELECT * FROM pessoa";
+        String sql = "SELECT * FROM produto";
         try (Connection conn = ConexaoBanco.conectar();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {

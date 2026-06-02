@@ -29,6 +29,7 @@ private boolean modoAtualizacao = false;
     for (Pessoa p : lista) {
         tabelaModelo.addRow(new Object[]{p.getId(), p.getNome(), p.getIdade()});
     }
+    
 }
   private void buscarDinamicamente() {
     String nomeBuscado = txtBuscar.getText().trim();

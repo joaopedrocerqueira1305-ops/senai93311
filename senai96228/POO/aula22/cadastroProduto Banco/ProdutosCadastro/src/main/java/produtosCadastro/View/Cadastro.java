@@ -27,6 +27,7 @@ public class Cadastro extends javax.swing.JFrame {
         for (Produto p : lista) {
             tabelaModelo.addRow(new Object[]{p.getId(), p.getNome(), p.getCategoria(), p.getPreco(), p.getQuantidade()});
         }
+        
     }
     
     private void buscarDinamicamente() {
@@ -38,6 +39,7 @@ public class Cadastro extends javax.swing.JFrame {
         for (Produto p : lista) {
             tabelaModelo.addRow(new Object[]{p.getId(), p.getNome(), p.getCategoria(), p.getPreco(), p.getQuantidade()});
         }
+        
     }
 
     private void preencherCamposDaTabela() {
@@ -70,7 +72,12 @@ public class Cadastro extends javax.swing.JFrame {
     public Cadastro() {
         initComponents();
         
-        tabelaModelo = (DefaultTableModel) tbListar.getModel();
+        // 1. Criamos um modelo limpo com as colunas corretas manualmente
+        String[] colunas = {"ID", "NOME", "CATEGORIA", "PREÇO", "QUANTIDADE"};
+        tabelaModelo = new DefaultTableModel(colunas, 0);
+    
+        // 2. Vinculamos ESSE modelo controlado à sua tabela tbListar
+        tbListar.setModel(tabelaModelo);
 
         tbListar.setDefaultEditor(Object.class, null);
 
@@ -80,8 +87,8 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
 
-    atualizarTabela();
-}
+        atualizarTabela();
+    }
 
 
     /**
@@ -93,6 +100,8 @@ public class Cadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
@@ -103,13 +112,26 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txtQuantidade = new javax.swing.JTextField();
         BtnCadastrar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tbListar = new javax.swing.JTable();
         BtnAlterar = new javax.swing.JButton();
         BtnRemover = new javax.swing.JButton();
         BtnSair = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         txtBusca = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tbListar = new javax.swing.JTable();
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -141,17 +163,6 @@ public class Cadastro extends javax.swing.JFrame {
                 BtnCadastrarActionPerformed(evt);
             }
         });
-
-        tbListar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tbListar.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "NOME", "CATEGORIA", "PREÇO", "QUANTIDADE"
-            }
-        ));
-        jScrollPane1.setViewportView(tbListar);
 
         BtnAlterar.setText("Alterar");
         BtnAlterar.addActionListener(new java.awt.event.ActionListener() {
@@ -189,6 +200,16 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
 
+        tbListar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "NOME", "CATEGORIA", "PREÇO", "QUANTIDADE"
+            }
+        ));
+        jScrollPane3.setViewportView(tbListar);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -215,20 +236,19 @@ public class Cadastro extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(txtQuantidade)))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(BtnCadastrar)
-                            .addGap(18, 18, 18)
-                            .addComponent(BtnAlterar)
-                            .addGap(18, 18, 18)
-                            .addComponent(BtnRemover)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BtnSair))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(BtnCadastrar)
+                        .addGap(18, 18, 18)
+                        .addComponent(BtnAlterar)
+                        .addGap(18, 18, 18)
+                        .addComponent(BtnRemover)
+                        .addGap(115, 115, 115)
+                        .addComponent(BtnSair))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
-                        .addComponent(txtBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -260,9 +280,9 @@ public class Cadastro extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txtBusca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -273,7 +293,7 @@ public class Cadastro extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -362,7 +382,7 @@ public class Cadastro extends javax.swing.JFrame {
 
                 javax.swing.JOptionPane.showMessageDialog(
                 this, 
-                "Pessoa cadastrada com sucesso!"
+                "Produto cadastrada com sucesso!"
                 );
             }
 
@@ -462,7 +482,9 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTable tbListar;
     private javax.swing.JTextField txtBusca;
     private javax.swing.JTextField txtCategoria;

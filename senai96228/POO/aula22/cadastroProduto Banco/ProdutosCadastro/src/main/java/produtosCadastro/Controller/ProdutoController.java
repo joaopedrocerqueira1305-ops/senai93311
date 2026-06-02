@@ -19,10 +19,10 @@ public class ProdutoController {
     dao.inserir(produto);
     }
 
+
     public ArrayList<Produto> listar() {
         return dao.listar();
     }
-
     public void atualizar(int id, String nome, String categoria, double preco, int quantidade) {
         Produto p = new Produto(id,nome, categoria, preco, quantidade);
         dao.atualizar(p);
