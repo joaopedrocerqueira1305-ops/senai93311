@@ -1,3 +1,4 @@
-com\mycompany\sistemaproduto\SistemaProduto.class
-sistemaProduto\Model\Produto.class
 sistemaProduto\Model\Usuario.class
+com\mycompany\sistemaproduto\SistemaProduto.class
+sistemaProduto\Conexao\ConexaoBanco.class
+sistemaProduto\Model\Produto.class

@@ -9,11 +9,11 @@ package sistemaProduto.Model;
  * @author aluno.den
  */
 public class Produto extends Usuario{
-    private int id;
+    private int id_produto;
     private String nome;
     private int quantidade;
     private Double preco;
-    private Usuario responsavel;
+    private Usuario idUsuario;
     
     public Produto(){
     }
@@ -26,27 +26,27 @@ public class Produto extends Usuario{
         super(nome, senha);
     }
 
-    public Produto(int id, String nome, int quantidade, Double preco, Usuario responsavel) {
-        this.id = id;
+    public Produto(int id_produto, String nome, int quantidade, Double preco, Usuario idUsuario) {
+        this.id_produto = id_produto;
         this.nome = nome;
         this.quantidade = quantidade;
         this.preco = preco;
-        this.responsavel = responsavel;
+        this.idUsuario = idUsuario;
     }
 
-    public Produto(String nome, int quantidade, Double preco, Usuario responsavel) {
+    public Produto(String nome, int quantidade, Double preco, Usuario idUsuario) {
         this.nome = nome;
         this.quantidade = quantidade;
         this.preco = preco;
-        this.responsavel = responsavel;
+        this.idUsuario = idUsuario;
     }
 
-    public int getId() {
-        return id;
+    public int getId_produto() {
+        return id_produto;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId_produto(int id_produto) {
+        this.id_produto = id_produto;
     }
 
     public String getNome() {
@@ -73,13 +73,11 @@ public class Produto extends Usuario{
         this.preco = preco;
     }
 
-    public Usuario getResponsavel() {
-        return responsavel;
+    public Usuario getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setResponsavel(Usuario responsavel) {
-        this.responsavel = responsavel;
-    }
-    
-    
+    public void setIdUsuario(Usuario idUsuario) {
+        this.idUsuario = idUsuario;
+    }   
 }
